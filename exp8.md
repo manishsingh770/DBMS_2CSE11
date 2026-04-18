@@ -219,7 +219,7 @@ JOIN dept d ON e.deptno = d.deptno
 JOIN salgrade s ON e.sal BETWEEN s.losal AND s.hisal
 WHERE e.sal*12 >= 36000 OR e.job <> 'CLERK';
 ```
-
+## 7. List ename, job, annual sal, deptno, dname and grade who earn 30000 per year and who are not clerks.
 ```sql
 SELECT e.ename, e.job, e.sal*12 AS annual_salary,
 e.deptno, d.dname, s.grade
