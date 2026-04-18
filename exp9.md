@@ -3,3 +3,4 @@
 
 ## 🎯 Objective
 To apply SQL queries using subqueries, joins, and aggregate functions to retrieve and analyze employee data based on salary conditions, job roles, and department information.
+___
