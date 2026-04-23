@@ -15,3 +15,16 @@ ___
 ## 8. Display those employees whose salary is greater than their manager’s salary.
 ## 9. Display those employees who are working in the same department as their manager.
 ## 10. Display grade and employee names for employees in department number 10 or 30, whose grade is not 4, and who joined the company before 31-Dec-1982.
+___
+
+## 1. Display the names of employees from department number 10 with salary greater than that of any employee working in other departments.
+```sql
+SELECT ENAME
+FROM EMPLOYEE
+WHERE DEPTNO = 10
+AND SAL > ANY (
+  SELECT SAL
+  FROM EMPLOYEE
+  WHERE DEPTNO <> 10
+);
+```
